@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=yes">
 <title>Provision Plumbing | Master Plumber in Gulf Shores, AL | (251) 709-7180</title>
 <meta name="description" content="Provision Plumbing is a licensed & insured, owner-operated plumbing company in Gulf Shores, AL. Leak repair, drain cleaning, water heaters & more across South Baldwin County. 5.0★ on Google. Call (251) 709-7180.">
-<link rel="canonical" href="https://provisionplumbingllc.com/">
+<link rel="canonical" href="https://provisionplumbing.vercel.app/">
 <meta property="og:title" content="Provision Plumbing | Gulf Shores Master Plumber">
 <meta property="og:description" content="Owner-operated, licensed & insured plumbing in Gulf Shores, Orange Beach, Foley & South Baldwin County. 5.0★ on Google.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://provisionplumbingllc.com/images/og.jpg">
+<meta property="og:image" content="https://provisionplumbing.vercel.app/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://provisionplumbing.vercel.app/">
+<meta property="og:site_name" content="Provision Plumbing">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <meta name="theme-color" content="#070d14">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070d14'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-size='34' font-weight='900' fill='%2338d6e6' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,11 +28,11 @@
   "@context": "https://schema.org",
   "@type": "Plumber",
   "name": "Provision Plumbing, LLC",
-  "image": "https://provisionplumbingllc.com/images/og.jpg",
-  "logo": "https://provisionplumbingllc.com/images/logo-light.png",
+  "image": "https://provisionplumbing.vercel.app/images/og.jpg",
+  "logo": "https://provisionplumbing.vercel.app/images/logo-light.png",
   "telephone": "+12517097180",
   "email": "provisionplumbingsvc@gmail.com",
-  "url": "https://provisionplumbingllc.com/",
+  "url": "https://provisionplumbing.vercel.app/",
   "founder": { "@type": "Person", "name": "James Nettles", "jobTitle": "Owner / Master Plumber" },
   "address": {
     "@type": "PostalAddress",
@@ -200,7 +207,7 @@ section{padding:92px 0}
 .why-item p{color:var(--mid)}
 .owner{margin-top:64px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:var(--navy);color:#fff;border-radius:12px;padding:30px 34px;border-left:6px solid var(--cyan)}
 .owner .av{width:110px;height:110px;border-radius:50%;border:3px solid var(--cyan);object-fit:cover;object-position:50% 30%}
-.owner h3{font-family:var(--fh);font-weight:400;font-size:28px;letter-spacing:.03em;text-transform:uppercase}
+.owner h3{font-family:var(--fh);font-weight:400;font-size:28px;line-height:1.1;letter-spacing:.03em;text-transform:uppercase}
 .owner h3 small{display:block;font-family:var(--fb);font-size:13px;color:var(--cyan);letter-spacing:.16em;font-weight:800}
 .owner p{color:#cbd5e1;margin-top:6px;max-width:640px}
 
@@ -279,6 +286,11 @@ footer .logo{margin-bottom:14px}
   .stat:nth-child(-n+3){border-bottom:1px solid rgba(255,255,255,.08)}
 }
 @media (max-width:900px){
+  .hphone a{display:inline-block;padding:12px 0}
+  .svc a{display:inline-block;padding:12px 0;margin-top:2px}
+  .fnote a,.rv-more a{display:inline-block;padding:10px 0}
+  footer li a{display:inline-block;padding:8px 0}
+  .ebar .sep,.ebar .live .hide-m{display:none}
   .hero-grid{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:60px}
   .why-grid,.rv-grid{grid-template-columns:1fr}
   .jobs{grid-template-columns:1fr 1fr}.jobs figure.wide{grid-column:1/-1;order:-1;aspect-ratio:4/3}
@@ -292,7 +304,26 @@ footer .logo{margin-bottom:14px}
   section{padding:64px 0}
   .wrap{padding:0 16px}
   .ebar .hide-m{display:none}
-  .ebar{font-size:13px}.ebar .live{font-size:11px;letter-spacing:.05em}
+
+  .ebar .live{font-size:12px}
+  body{padding-bottom:0}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .mcall{padding-bottom:env(safe-area-inset-bottom);background:var(--navy)}
+  .mcall a{min-height:56px;display:flex;align-items:center;justify-content:center}
+  footer li{margin-bottom:2px}
+  .faq summary{padding:18px 40px 18px 0;font-size:17px}
+  .owner{padding:24px 20px}
+  .owner .av{width:96px;height:96px}
+  .jobs{gap:10px}
+  .jobs figcaption{padding:28px 12px 12px;font-size:13px}
+  .qcard{padding:26px 18px}
+  .hero h1{font-size:clamp(40px,12vw,64px)}
+  .h2{font-size:clamp(32px,9.5vw,46px)}
+  .cta .big{font-size:clamp(38px,11vw,64px)}
+  .stat{padding:18px 8px;gap:10px;min-width:0}
+  .stat b{font-size:22px}
+  .stat span{font-size:12px;letter-spacing:.04em}
+  .ebar{font-size:13px}.ebar .live{font-size:12px;letter-spacing:.05em}
   .hero-grid.wrap{padding-top:36px;padding-bottom:52px}
   .logo b{white-space:nowrap}
   .hdr{padding-top:10px;padding-bottom:10px}
@@ -315,6 +346,13 @@ footer .logo{margin-bottom:14px}
   .mcall a{padding:16px;text-align:center;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:15px}
   .mcall .c{background:var(--cyan);color:#001017}
   .mcall .q{background:var(--navy);color:#fff}
+}
+@media (max-width:370px){
+  .stat .ic{display:none}
+  .svc-grid{grid-template-columns:1fr}
+  .hphone a{font-size:15px}
+  .logo-img{height:36px}
+  .mcall a{font-size:13px;padding:0 6px}
 }
 @media (prefers-reduced-motion:reduce){.up{animation:none;opacity:1;transform:none}.dot{animation:none}}
 </style>
@@ -377,11 +415,11 @@ footer .logo{margin-bottom:14px}
       <p class="sub">Send a request and Jimmy will call you back — usually the same business day.</p>
       <form id="leadForm" novalidate>
         <div class="frow">
-          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" autocapitalize="words" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
         </div>
         <div class="frow">
-          <div class="field"><label for="f-email">Email <span style="font-weight:600;text-transform:none;color:var(--muted)">(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="f-email">Email <span style="font-weight:600;text-transform:none;color:var(--muted)">(optional)</span></label><input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off"></div>
           <div class="field"><label for="f-city">City</label>
             <select id="f-city" name="city">
               <option>Gulf Shores</option><option>Orange Beach</option><option>Foley</option><option>Fort Morgan</option><option>Bon Secour</option><option>Elberta</option><option>Magnolia Springs</option><option>Summerdale</option><option>Robertsdale</option><option>Lillian</option><option>Perdido Beach</option><option>Other</option>
@@ -418,7 +456,7 @@ footer .logo{margin-bottom:14px}
     <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>A+</b><span>BBB Rating</span></div></div>
     <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div><div><b>Master</b><span>Plumber</span></div></div>
     <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></div><div><b>Free</b><span>Estimates</span></div></div>
-    <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><b>Local</b><span>Gulf Shores Based</span></div></div>
+    <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><b>Local</b><span>Gulf Shores</span></div></div>
   </div>
 </div>
 

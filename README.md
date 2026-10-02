@@ -27,5 +27,5 @@ Without `RESEND_API_KEY` the form shows a "please call" fallback instead of fail
 
 - Confirm hours (Birdeye lists M–F 8–5; Google has none set).
 - Swap the domain in `<link rel="canonical">` and the schema `url` if it isn't provisionplumbingllc.com.
-- Add real job photos (the GBP has a few) and an `og.jpg`.
+- Swap in more job photos as Jimmy sends them (`images/`).
 - Add the Alabama plumbing license number to the footer if Jimmy wants it shown.
