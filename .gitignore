@@ -2,3 +2,7 @@ node_modules
 .vercel
 .env*
 .DS_Store
+
+# raw source images (optimized copies live in images/)
+/*.jpg
+/*.png
