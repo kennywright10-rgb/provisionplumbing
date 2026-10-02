@@ -9,6 +9,7 @@
 <meta property="og:title" content="Provision Plumbing | Gulf Shores Master Plumber">
 <meta property="og:description" content="Owner-operated, licensed & insured plumbing in Gulf Shores, Orange Beach, Foley & South Baldwin County. 5.0★ on Google.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://provisionplumbingllc.com/images/og.jpg">
 <meta name="theme-color" content="#070d14">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070d14'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-size='34' font-weight='900' fill='%2338d6e6' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,8 @@
   "@context": "https://schema.org",
   "@type": "Plumber",
   "name": "Provision Plumbing, LLC",
-  "image": "https://provisionplumbingllc.com/og.jpg",
+  "image": "https://provisionplumbingllc.com/images/og.jpg",
+  "logo": "https://provisionplumbingllc.com/images/logo-light.png",
   "telephone": "+12517097180",
   "email": "provisionplumbingsvc@gmail.com",
   "url": "https://provisionplumbingllc.com/",
@@ -103,7 +105,7 @@ img,svg{display:block}
 .hdr-wrap{position:sticky;top:0;z-index:600;background:var(--navy);border-bottom:4px solid var(--cyan)}
 .hdr{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
 .logo{display:flex;align-items:center;gap:14px;color:#fff}
-.logo svg{width:64px;height:auto;flex:none}
+.logo-img{height:60px;width:auto}
 .logo b{font-family:var(--fh);font-weight:400;font-size:27px;line-height:1;letter-spacing:.04em;display:block}
 .logo small{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-top:5px}
 .hdr-r{display:flex;align-items:center;gap:28px}
@@ -195,10 +197,19 @@ section{padding:92px 0}
 .why-item h3{font-size:22px;font-weight:800;margin-bottom:8px}
 .why-item p{color:var(--mid)}
 .owner{margin-top:64px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:var(--navy);color:#fff;border-radius:12px;padding:30px 34px;border-left:6px solid var(--cyan)}
-.owner .av{width:84px;height:84px;border-radius:50%;background:var(--navy3);border:3px solid var(--cyan);display:grid;place-items:center;font-family:var(--fh);font-size:32px;color:var(--cyan)}
+.owner .av{width:110px;height:110px;border-radius:50%;border:3px solid var(--cyan);object-fit:cover;object-position:50% 30%}
 .owner h3{font-family:var(--fh);font-weight:400;font-size:28px;letter-spacing:.03em;text-transform:uppercase}
 .owner h3 small{display:block;font-family:var(--fb);font-size:13px;color:var(--cyan);letter-spacing:.16em;font-weight:800}
 .owner p{color:#cbd5e1;margin-top:6px;max-width:640px}
+
+/* Gallery */
+.jobs{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:16px;margin-top:56px}
+.jobs figure{position:relative;border-radius:12px;overflow:hidden;background:var(--navy);aspect-ratio:3/4}
+.jobs figure.wide{aspect-ratio:auto}
+.jobs img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.jobs figure:hover img{transform:scale(1.04)}
+.jobs figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(7,13,20,.92));color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em}
+.jobs figcaption span{display:block;color:var(--cyan);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
 
 /* Reviews */
 .rv-badge{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:14px 20px}
@@ -268,6 +279,7 @@ footer .logo{margin-bottom:14px}
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:60px}
   .why-grid,.rv-grid{grid-template-columns:1fr}
+  .jobs{grid-template-columns:1fr 1fr}.jobs figure.wide{grid-column:1/-1;order:-1;aspect-ratio:4/3}
   .faq-grid{grid-template-columns:1fr;gap:20px}
   .faq-side{position:static}
   .owner{grid-template-columns:1fr;text-align:left}
@@ -282,14 +294,12 @@ footer .logo{margin-bottom:14px}
   .hero-grid.wrap{padding-top:36px;padding-bottom:52px}
   .logo b{white-space:nowrap}
   .hdr{padding-top:10px;padding-bottom:10px}
-  .logo svg{width:46px}
   .logo b{font-size:21px}
   .logo small{font-size:9.5px;letter-spacing:.14em}
   .hdr-r .btn{display:none}
   .hphone small{display:none}
   .hphone a{font-size:17px}
-  .logo b{font-size:15px!important}
-  .logo svg{width:38px}
+  .logo-img{height:42px}
   .hdr{gap:10px}
   .logo small{display:none}
   .svc-grid{grid-template-columns:1fr}
@@ -319,15 +329,7 @@ footer .logo{margin-bottom:14px}
 <!-- Header -->
 <header class="hdr-wrap">
   <div class="wrap hdr">
-    <a href="#top" class="logo" aria-label="Provision Plumbing home">
-      <svg viewBox="0 0 120 50" fill="none" stroke="#38d6e6" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-        <path d="M4 33c0-4 3-6 7-6h56l6-6h14v-8h10c4 0 7 3 7 7v6l6 3v10h-8l-4-3h-7l-4 5H73l-4-4H11c-4 0-7-1-7-4z"/>
-        <path d="M14 33h52"/>
-        <path d="M97 13v-4h11c3 0 5 2 5 5"/>
-        <path d="M87 21h10M87 27h10"/>
-      </svg>
-      <span><b>PROVISION PLUMBING</b><small>Gulf Shores · Master Plumber</small></span>
-    </a>
+    <a href="#top" class="logo" aria-label="Provision Plumbing home"><img src="images/logo-light.png" alt="Provision Plumbing" width="560" height="265" class="logo-img"></a>
     <div class="hdr-r">
       <nav class="nav" aria-label="Main">
         <a href="#services">Services</a>
@@ -452,12 +454,17 @@ footer .logo{margin-bottom:14px}
       <div class="why-item"><div class="num">03</div><h3>The Price We Quote</h3><p>Free estimates and upfront pricing. Our customers say it best: "made the repair quickly at the price quoted."</p></div>
     </div>
     <div class="owner">
-      <div class="av">JN</div>
+      <img class="av" src="images/plumber.webp" alt="James 'Jimmy' Nettles, owner of Provision Plumbing, on a job in Gulf Shores" width="168" height="168" loading="lazy">
       <div>
         <h3><small>Meet the Owner</small>James "Jimmy" Nettles</h3>
         <p>Owner and Master Plumber of Provision Plumbing, LLC. Jimmy built Provision on a simple idea: answer the phone, show up on time, charge what you said you would, and treat every home like your own.</p>
       </div>
       <a href="tel:+12517097180" class="btn btn-call btn-sm">Call Jimmy</a>
+    </div>
+    <div class="jobs">
+      <figure><picture><source srcset="images/plumber.webp" type="image/webp"><img src="images/plumber.jpg" alt="Provision Plumbing clearing a drain line outside a Gulf Shores home" loading="lazy" width="675" height="900"></picture><figcaption><span>Drain Cleaning</span>Owner on every job</figcaption></figure>
+      <figure class="wide"><picture><source srcset="images/car.webp" type="image/webp"><img src="images/car.jpg" alt="Provision Plumbing service vehicle with phone number 251-709-7180" loading="lazy" width="1200" height="900"></picture><figcaption><span>On the Road</span>Serving South Baldwin County</figcaption></figure>
+      <figure><picture><source srcset="images/beforeafter.webp" type="image/webp"><img src="images/beforeafter.jpg" alt="New PEX shower valve rough-in installed by Provision Plumbing" loading="lazy" width="675" height="900"></picture><figcaption><span>Repipe / Rough-In</span>Clean, to-code work</figcaption></figure>
     </div>
   </div>
 </section>
@@ -548,10 +555,7 @@ footer .logo{margin-bottom:14px}
   <div class="wrap">
     <div class="ft">
       <div>
-        <a href="#top" class="logo">
-          <svg viewBox="0 0 120 50" width="54" fill="none" stroke="#38d6e6" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M4 33c0-4 3-6 7-6h56l6-6h14v-8h10c4 0 7 3 7 7v6l6 3v10h-8l-4-3h-7l-4 5H73l-4-4H11c-4 0-7-1-7-4z"/><path d="M14 33h52"/><path d="M97 13v-4h11c3 0 5 2 5 5"/><path d="M87 21h10M87 27h10"/></svg>
-          <span><b style="font-size:22px">PROVISION PLUMBING</b><small>Licensed &amp; Insured LLC</small></span>
-        </a>
+        <a href="#top" class="logo"><img src="images/logo-light.png" alt="Provision Plumbing" width="560" height="265" style="height:76px;width:auto" loading="lazy"></a>
         <p>Owner-operated plumbing in Gulf Shores, AL. James Nettles, Owner / Master Plumber.</p>
       </div>
       <div>
