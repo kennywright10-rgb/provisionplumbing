@@ -179,12 +179,14 @@ section{padding:92px 0}
 
 /* Services */
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.svc{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:26px 22px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.svc{background:#fff;border:1px solid var(--rule);border-radius:12px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.svc picture{display:block;background:#070d14;overflow:hidden}
+.svc-img{width:100%;height:auto;aspect-ratio:600/590;object-fit:cover;transition:transform .5s}
+.svc:hover .svc-img{transform:scale(1.04)}
+.svc-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
 .svc:after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--cyan);transition:width .25s}
 .svc:hover{transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(7,13,20,.35);border-color:transparent}
 .svc:hover:after{width:100%}
-.svc .ic{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--cyan);display:grid;place-items:center;margin-bottom:16px}
-.svc .ic svg{width:25px;height:25px}
 .svc h3{font-size:19px;font-weight:800;line-height:1.25;margin-bottom:6px}
 .svc p{color:var(--mid);font-size:15.5px;flex:1}
 .svc a{margin-top:14px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
@@ -302,7 +304,8 @@ footer .logo{margin-bottom:14px}
   .logo-img{height:42px}
   .hdr{gap:10px}
   .logo small{display:none}
-  .svc-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .svc-body{padding:12px 12px 14px}.svc p{font-size:14px}.svc a{font-size:12px}
   .trust .wrap{grid-template-columns:1fr 1fr}
   .stat{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.08)}
   .frow{grid-template-columns:1fr}
@@ -431,14 +434,14 @@ footer .logo{margin-bottom:14px}
       <a href="#quote" class="btn btn-call btn-sm">Get a Free Estimate</a>
     </div>
     <div class="svc-grid">
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Leak Detection &amp; Repair</h3><p>Slab, wall, ceiling and under-sink leaks found fast and fixed properly.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v4H4zM6 8v4a6 6 0 0 0 12 0V8M12 18v3"/></svg></div><h3>Drain Cleaning</h3><p>Slow sinks, backed-up tubs and stubborn clogs cleared without the mess.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 17c0-1.5 2-2.5 2-4 0 1.5 2 2.5 2 4a2 2 0 0 1-4 0z"/></svg></div><h3>Water Heaters</h3><p>Repair and replacement for tank water heaters — back to hot showers quickly.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></div><h3>Water Line &amp; Meter Leaks</h3><p>Main line breaks and leaks at the meter located and repaired the same day when possible.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 10h14v2a7 7 0 0 1-14 0zM8 19l-1 3M16 19l1 3M7 10V4h5v6"/></svg></div><h3>Toilets &amp; Fixtures</h3><p>Running toilets, dripping faucets, new fixtures, disposals and shut-off valves.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7h6v10h12M9 12h6"/><circle cx="3" cy="7" r="1"/></svg></div><h3>Repiping &amp; Rough-In</h3><p>PEX and PVC repipes, remodels and new-construction rough-in done to code.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h20M5 14V9a2 2 0 0 1 2-2h3M19 14v4H5v-4"/><path d="M14 7h5v3"/></svg></div><h3>Sewer Line Service</h3><p>Sewer backups and line problems diagnosed and repaired.</p><a href="#quote">Request Service →</a></article>
-      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div><h3>Rentals &amp; Condos</h3><p>Dependable service for vacation rental owners and property managers between guests.</p><a href="#quote">Request Service →</a></article>
+      <article class="svc"><picture><source srcset="images/svc-leak-detection.webp" type="image/webp"><img class="svc-img" src="images/svc-leak-detection.jpg" alt="Leak detection and repair in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Leak Detection &amp; Repair</h3><p>Slab, wall, ceiling and under-sink leaks found fast and fixed properly.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-drain-cleaning.webp" type="image/webp"><img class="svc-img" src="images/svc-drain-cleaning.jpg" alt="Drain cleaning in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Drain Cleaning</h3><p>Slow sinks, backed-up tubs and stubborn clogs cleared without the mess.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-water-heaters.webp" type="image/webp"><img class="svc-img" src="images/svc-water-heaters.jpg" alt="Water heater repair and replacement in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Water Heaters</h3><p>Repair and replacement for tank water heaters — back to hot showers quickly.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-water-line-meter.webp" type="image/webp"><img class="svc-img" src="images/svc-water-line-meter.jpg" alt="Water line and meter leak repair in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Water Line &amp; Meter Leaks</h3><p>Main line breaks and leaks at the meter located and repaired the same day when possible.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-toilets-fixtures.webp" type="image/webp"><img class="svc-img" src="images/svc-toilets-fixtures.jpg" alt="Toilet and fixture repair in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Toilets &amp; Fixtures</h3><p>Running toilets, dripping faucets, new fixtures, disposals and shut-off valves.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-repiping-rough-in.webp" type="image/webp"><img class="svc-img" src="images/svc-repiping-rough-in.jpg" alt="Repiping and new construction rough-in in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Repiping &amp; Rough-In</h3><p>PEX and PVC repipes, remodels and new-construction rough-in done to code.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-sewer-line.webp" type="image/webp"><img class="svc-img" src="images/svc-sewer-line.jpg" alt="Sewer line service in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Sewer Line Service</h3><p>Sewer backups and line problems diagnosed and repaired.</p><a href="#quote">Request Service →</a></div></article>
+      <article class="svc"><picture><source srcset="images/svc-rentals-condos.webp" type="image/webp"><img class="svc-img" src="images/svc-rentals-condos.jpg" alt="Plumbing for vacation rentals and condos in Gulf Shores, AL" width="600" height="590" loading="lazy"></picture><div class="svc-body"><h3 class="sr">Rentals &amp; Condos</h3><p>Dependable service for vacation rental owners and property managers between guests.</p><a href="#quote">Request Service →</a></div></article>
     </div>
   </div>
 </section>
